@@ -62,6 +62,9 @@ export default function Home() {
         <div className="absolute top-8 left-8 bg-black text-white font-bangers px-6 py-2 rounded-full border-4 border-white text-xl shadow-comic-xl z-20 animate-bounce-in">2e édition</div>
         <div className="max-w-4xl mx-auto z-10">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bangers uppercase text-black drop-shadow-text-comic leading-tight mb-6 animate-bounce-in">L&apos;aventure BD recommence ici !</h1>
+          <div className="flex justify-center mb-6">
+            <span className="inline-block bg-white border-4 border-black rounded-xl px-8 py-4 font-bangers text-3xl sm:text-5xl md:text-6xl text-[#dbc414] shadow-comic-xl uppercase tracking-wider">17 et 18 mai 2025</span>
+          </div>
           <p className="text-xl sm:text-2xl md:text-3xl font-body font-bold text-black mb-8 animate-fade-in-up">On ne croyait déjà pas arriver à réaliser la première, et nous revoici pour une autre !</p>
         </div>
         {/* Chiffres clés */}
