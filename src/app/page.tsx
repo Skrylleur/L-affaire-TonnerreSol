@@ -78,7 +78,7 @@ export default function Home() {
         </div>
         <div className="mt-6 flex flex-col items-center">
           <span className="bg-[#dbc414] border-4 border-black rounded-full px-6 py-2 font-bangers text-xl shadow-comic-xl">Entrée gratuite, même pour les conférences et le concert</span>
-          <span className="mt-2 text-black font-body text-base">Animations enfants, auto-édités, fanzines, grande buvette…</span>
+          <span className="mt-2 text-black font-body text-base">Animations enfants, auto-édités, fanzones, grande buvette…</span>
         </div>
       </section>
 
