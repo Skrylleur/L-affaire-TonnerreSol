@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# L'Affaire Tonnerresol
 
-## Getting Started
+Site officiel du festival de bande dessinée **L'Affaire Tonnerresol**.
 
-First, run the development server:
+## ✨ Présentation
+
+L'Affaire Tonnerresol est un festival annuel de bande dessinée rassemblant plus de 1200 passionnés autour d'artistes, d'ateliers, de concerts dessinés et d'une programmation haute en couleur !
+
+Ce site propose une expérience immersive dans l'univers du festival, avec un design inspiré des comics :
+- Couleurs vives (jaune #dbc414)
+- Typographie Bangers
+- Effets cartoon, contours noirs, animations et onomatopées
+- Responsive et accessible sur mobile
+
+## 🚀 Fonctionnalités principales
+- **Hero section** animée avec slogan, étoiles et effets BD
+- **Navigation** fluide et boutons cartoon
+- **Présentation du festival** et de la programmation
+- **Infos pratiques** et galerie
+- **Footer** avec crédits
+
+## 🛠️ Stack technique
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- Typographie [Bangers](https://fonts.google.com/specimen/Bangers)
+
+## 📦 Installation
+
+1. **Cloner le repo**
+
+```bash
+git clone git@github.com:Skrylleur/L-affaire-TonnerreSol.git
+cd L-affaire-TonnerreSol
+```
+
+2. **Installer les dépendances**
+
+```bash
+npm install
+```
+
+3. **Lancer le serveur de développement**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site est accessible sur [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` : Lancer le serveur Next.js en mode développement
+- `npm run build` : Build de production
+- `npm run start` : Lancer le serveur en mode production
+- `npm run lint` : Linter le code
 
-## Learn More
+## 🌍 Déploiement
 
-To learn more about Next.js, take a look at the following resources:
+Le site peut être déployé sur Vercel, Netlify ou tout hébergeur compatible Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Structure principale
+- `src/app/page.tsx` : Page d'accueil et sections principales
+- `public/Logo.jpg` : Logo officiel du festival
+- `tailwind.config.js` : Personnalisation Tailwind (couleurs, animations, polices)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍🎨 Crédits
 
-## Deploy on Vercel
+Site réalisé par Antonin Gourinchas pour L'Affaire Tonnerresol.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Vive la BD !*
