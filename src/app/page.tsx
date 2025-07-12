@@ -1,3 +1,5 @@
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-[#fffbea] to-orange-50 text-black overflow-x-hidden">
@@ -323,6 +325,9 @@ export default function Home() {
           <p className="text-lg font-body text-black">Site réalisé par Antonin Gourinchas</p>
         </div>
       </footer>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 }
