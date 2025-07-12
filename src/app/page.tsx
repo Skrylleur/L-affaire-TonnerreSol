@@ -58,157 +58,47 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Optimized Comic Style */}
-      <section className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 bg-gradient-to-br from-[#dbc414] via-yellow-400 to-orange-400 border-b-8 border-black overflow-hidden">
-        {/* Animated background with flowing gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#dbc414] via-yellow-400 to-orange-400 animate-gradient-flow"></div>
-        
-        {/* Enhanced halftone background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="halftone-hero" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-                <circle cx="6" cy="6" r="1" fill="black"/>
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#halftone-hero)"/>
-          </svg>
+      <section className="relative min-h-screen flex flex-col justify-center items-center py-20 px-4 sm:px-6 bg-gradient-to-br from-[#dbc414] via-yellow-400 to-orange-400 border-b-8 border-black overflow-hidden text-center">
+        <div className="absolute top-8 left-8 bg-black text-white font-bangers px-6 py-2 rounded-full border-4 border-white text-xl shadow-comic-xl z-20 animate-bounce-in">2e édition</div>
+        <div className="max-w-4xl mx-auto z-10">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bangers uppercase text-black drop-shadow-text-comic leading-tight mb-6 animate-bounce-in">L&apos;aventure BD recommence ici !</h1>
+          <p className="text-xl sm:text-2xl md:text-3xl font-body font-bold text-black mb-8 animate-fade-in-up">On ne croyait déjà pas arriver à réaliser la première, et nous revoici pour une autre !</p>
         </div>
-
-        {/* Animated decorative stars */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Star 1 */}
-          <svg className="absolute top-10 left-8 w-16 h-16 sm:w-20 sm:h-20 animate-float-slow" viewBox="0 0 100 100">
-            <path d="M50 5 L65 25 L85 35 L65 45 L50 75 L35 45 L15 35 L35 25 Z" fill="white" stroke="black" strokeWidth="3"/>
-            <path d="M50 15 L60 30 L70 35 L60 40 L50 55 L40 40 L30 35 L40 30 Z" fill="black"/>
-            <circle cx="50" cy="35" r="2" fill="white"/>
-          </svg>
-          
-          {/* Star 2 */}
-          <svg className="absolute top-20 right-12 w-12 h-12 sm:w-16 sm:h-16 animate-float-slow" style={{animationDelay: '1s'}} viewBox="0 0 100 100">
-            <path d="M50 10 L70 30 L90 40 L70 50 L50 80 L30 50 L10 40 L30 30 Z" fill="white" stroke="black" strokeWidth="3"/>
-            <path d="M50 20 L65 35 L75 40 L65 45 L50 60 L35 45 L25 40 L35 35 Z" fill="black"/>
-          </svg>
-          
-          {/* Star 3 */}
-          <svg className="absolute bottom-20 left-1/4 w-14 h-14 sm:w-18 sm:h-18 animate-float-slow" style={{animationDelay: '2s'}} viewBox="0 0 100 100">
-            <path d="M50 8 L68 28 L88 38 L68 48 L50 78 L32 48 L12 38 L32 28 Z" fill="white" stroke="black" strokeWidth="3"/>
-            <circle cx="50" cy="45" r="2" fill="black"/>
-          </svg>
-
-          {/* Lightning bolt */}
-          <svg className="absolute top-1/3 right-1/4 w-12 h-12 sm:w-16 sm:h-16 animate-pulse" viewBox="0 0 100 100">
-            <path d="M20 10 L35 25 L25 35 L40 50 L30 60 L50 80 L70 60 L60 50 L75 35 L65 25 L80 10 Z" fill="white" stroke="black" strokeWidth="2"/>
-          </svg>
-
-          {/* Onomatopoeia effects */}
-          <div className="absolute top-1/4 left-1/6 transform -rotate-12 animate-bounce-slow">
-            <div className="bg-white border-3 border-black rounded-full px-4 py-2 sm:px-6 sm:py-3 shadow-comic-lg">
-              <span className="font-bangers text-lg sm:text-2xl font-bold text-black">BOOM!</span>
-            </div>
-          </div>
-
-          <div className="absolute bottom-1/3 right-1/6 transform rotate-12 animate-bounce-slow" style={{animationDelay: '0.5s'}}>
-            <div className="bg-white border-3 border-black rounded-full px-4 py-2 sm:px-6 sm:py-3 shadow-comic-lg">
-              <span className="font-bangers text-lg sm:text-2xl font-bold text-black">POW!</span>
-            </div>
-          </div>
+        {/* Chiffres clés */}
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-4xl mx-auto">
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">22 auteurs<br/><span className="text-xs font-body">5 nationalités</span></div>
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">7 éditeurs<br/><span className="text-xs font-body">indépendants</span></div>
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">6 conférences</div>
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">3 expos</div>
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">1 concert live</div>
+          <div className="bg-white border-4 border-black rounded-xl p-4 font-bangers text-lg sm:text-xl shadow-comic-xl">1 prix littéraire</div>
         </div>
-        
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          {/* Main title with optimized comic panel */}
-          <div className="relative mb-12 sm:mb-16 animate-fade-in-up">
-            <div className="relative inline-block">
-              {/* Responsive explosion background */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  <filter id="shadow-hero" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="4" dy="4" stdDeviation="2" floodColor="black"/>
-                  </filter>
-                </defs>
-                <path d="M50 40 L80 20 L120 30 L150 15 L180 30 L220 20 L250 40 L270 70 L250 110 L220 130 L180 110 L150 130 L120 110 L80 130 L50 110 L30 70 Z" 
-                      fill="white" stroke="black" strokeWidth="6" filter="url(#shadow-hero)"/>
-                <path d="M50 110 L70 140 L50 170 L30 140 Z" fill="white" stroke="black" strokeWidth="3"/>
-              </svg>
-              
-              <div className="relative z-10 p-8 sm:p-12 lg:p-16">
-                {/* Optimized title structure for mobile */}
-                <div className="space-y-2 sm:space-y-4">
-                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bangers uppercase text-black drop-shadow-text-comic leading-none animate-bounce-in">
-                    L&apos;AVENTURE
-                  </h1>
-                  
-                  {/* Animated "BD" bubble */}
-                  <div className="relative inline-block animate-zoom-in" style={{animationDelay: '0.3s'}}>
-                    <div className="bg-black border-4 sm:border-6 border-white rounded-full px-6 py-3 sm:px-8 sm:py-4 shadow-comic-xl transform rotate-1 sm:rotate-2">
-                      <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bangers uppercase text-white drop-shadow-text-comic leading-none font-black animate-bd-pulse">
-                        BD
-                      </h2>
-                    </div>
-                    {/* Comic burst accent */}
-                    <svg className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-8 h-8 sm:w-12 sm:h-12 animate-pulse" viewBox="0 0 100 100">
-                      <path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="#dbc414" stroke="black" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  
-                  <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bangers uppercase text-black drop-shadow-text-comic leading-none animate-bounce-in" style={{animationDelay: '0.6s'}}>
-                    COMMENCE ICI !
-                  </h3>
-                </div>
-              </div>
+        <div className="mt-6 flex flex-col items-center">
+          <span className="bg-[#dbc414] border-4 border-black rounded-full px-6 py-2 font-bangers text-xl shadow-comic-xl">Entrée gratuite, même pour les conférences et le concert</span>
+          <span className="mt-2 text-black font-body text-base">Animations enfants, auto-édités, fanzines, grande buvette…</span>
+        </div>
+      </section>
+
+      {/* Section équipe */}
+      <section className="py-16 px-4 sm:px-8 bg-white border-b-8 border-black">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <h2 className="text-3xl sm:text-4xl font-bangers text-black mb-6 drop-shadow-text-comic">L&apos;équipe du festival</h2>
+          <img src="/Equipe.jpg" alt="L'équipe du festival" className="max-w-xs sm:max-w-sm md:max-w-md w-full border-4 border-black rounded-2xl shadow-comic-xl bg-[#fffbea] mb-6" />
+          <p className="font-body text-lg text-black text-center">Une équipe de passionné·es, bénévoles et ami·es, réunie pour faire vivre la bande dessinée et la fête à Tonnerresol !</p>
+        </div>
+      </section>
+
+      {/* Édito - Mot de l'équipe */}
+      <section className="py-16 px-4 sm:px-8 bg-white border-b-8 border-black">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <div className="flex-1">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bangers text-black mb-6 drop-shadow-text-comic">Pourquoi on continue ?</h2>
+            <div className="bg-[#fffbea] border-4 border-black rounded-2xl shadow-comic-xl p-6 sm:p-8 space-y-4 text-lg sm:text-xl font-body text-black leading-relaxed">
+              <p>Quand on regarde derrière nous et on voit toute la route parcourue, on s’en étonne nous-mêmes. On vous avoue que, ingénus enthousiastes que nous sommes, nous nous attendions à une deuxième édition plus facile à monter que la toute première, forts du succès remporté par le festival en 2024.</p>
+              <p>C’était sans compter sur l’ironie du sort… Cette année fut assez dure pour tous, dans un contexte international anxiogène et tendu ; à niveau plus pratique, pour les associations et les événements, ce fut le parcours du combattant entre des coupes budgétaires à tout va, à partir de la part collective du PassCulture, ainsi qu’en général une mise en second plan de la culture.</p>
+              <p>Il y a eu quelques moments de découragement. Et puis, on a fait ce qu’il faut toujours faire dans ces cas-là: parier sur la force du collectif, sur les valeurs du partage, de la réflexion, de la recherche du sens, sur le pouvoir des livres.</p>
+              <p>On a voulu contribuer malgré tout, à notre micro-micro-échelle, à la beauté du monde, apportant le temps d’un week-end un petit peu de joie dans notre ville et dans les esprits des festivaliers.</p>
             </div>
-          </div>
-
-          {/* Optimized subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-body font-bold text-black mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed animate-fade-in-up px-4" style={{animationDelay: '0.9s'}}>
-            Un festival explosif pour les amoureux de la bande dessinée !
-          </p>
-
-          {/* Enhanced CTA buttons with cartoon effects */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 animate-fade-in-up px-4" style={{animationDelay: '1.2s'}}>
-            <a 
-              href="#programmation" 
-              className="group relative px-8 py-4 sm:px-12 sm:py-6 bg-black text-white border-4 sm:border-6 border-white rounded-full shadow-comic-xl hover:shadow-comic-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 font-bangers text-lg sm:text-xl lg:text-2xl font-bold focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
-              style={{
-                textShadow: '2px 2px 0px rgba(0,0,0,0.8)',
-                boxShadow: '6px 6px 0px rgba(0,0,0,1), inset -2px -2px 0px rgba(255,255,255,0.3)'
-              }}
-            >
-              <span className="relative z-10">Voir la programmation</span>
-              <div className="absolute inset-0 bg-[#dbc414] rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </a>
-            
-            <a 
-              href="#" 
-              className="group relative px-8 py-4 sm:px-12 sm:py-6 bg-white text-black border-4 sm:border-6 border-black rounded-full shadow-comic-xl hover:shadow-comic-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 font-bangers text-lg sm:text-xl lg:text-2xl font-bold focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50"
-              style={{
-                textShadow: '2px 2px 0px rgba(0,0,0,0.5)',
-                boxShadow: '6px 6px 0px rgba(0,0,0,1), inset -2px -2px 0px rgba(0,0,0,0.2)'
-              }}
-            >
-              <span className="relative z-10">Réserver mes billets</span>
-              <div className="absolute inset-0 bg-[#dbc414] rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </a>
-          </div>
-
-          {/* Responsive stats grid */}
-          <div className="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto animate-fade-in-up px-4" style={{animationDelay: '1.5s'}}>
-            {[
-              { number: "1200+", label: "Participants", icon: "👥" },
-              { number: "50+", label: "Artistes", icon: "🎨" },
-              { number: "3", label: "Jours", icon: "📅" }
-            ].map((stat, index) => (
-              <div key={index} className="relative group">
-                <div className="bg-white border-4 sm:border-6 border-black rounded-2xl p-4 sm:p-6 shadow-comic-xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
-                  <div className="text-3xl sm:text-4xl mb-2">{stat.icon}</div>
-                  <div className="font-bangers text-3xl sm:text-4xl md:text-5xl text-[#dbc414] mb-2">{stat.number}</div>
-                  <div className="font-body font-bold text-black text-sm sm:text-base">{stat.label}</div>
-                </div>
-                {/* Comic burst accent */}
-                <svg className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-6 h-6 sm:w-8 sm:h-8 opacity-80 group-hover:opacity-100 transition-opacity" viewBox="0 0 100 100">
-                  <path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="#dbc414" stroke="black" strokeWidth="2"/>
-                </svg>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -283,38 +173,31 @@ export default function Home() {
       </section>
 
       {/* Programmation Section - Comic Strip Style */}
-      <section id="programmation" className="py-24 px-6 bg-gradient-to-br from-yellow-50 to-orange-50 relative">
-        {/* Zigzag divider */}
-        <div className="absolute top-0 left-0 right-0 h-8">
-          <svg className="w-full h-full" viewBox="0 0 1000 100">
-            <path d="M0 50 L50 0 L100 50 L150 0 L200 50 L250 0 L300 50 L350 0 L400 50 L450 0 L500 50 L550 0 L600 50 L650 0 L700 50 L750 0 L800 50 L850 0 L900 50 L950 0 L1000 50" 
-                  stroke="#dbc414" strokeWidth="8" fill="none"/>
-          </svg>
-        </div>
-        
+      <section id="programmation" className="py-24 px-6 bg-gradient-to-br from-yellow-50 to-orange-50 border-b-8 border-black">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-5xl md:text-6xl font-bangers text-center mb-16 text-black drop-shadow-text-comic">
-            Aperçu de la programmation
-          </h3>
-          
+          <h3 className="text-5xl md:text-6xl font-bangers text-center mb-16 text-black drop-shadow-text-comic">Un week-end de rencontres, de partage et de découvertes !</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: "🎤", title: "Concert dessiné", desc: "Une performance live unique entre musique et illustrations" },
-              { icon: "🖊️", title: "Dédicaces d'auteurs", desc: "Venez rencontrer vos auteurs de BD préférés" },
-              { icon: "🎨", title: "Ateliers créatifs", desc: "Pour petits et grands : initiation au dessin, fanzine et plus encore" }
-            ].map((event, index) => (
-              <div key={index} className="group relative">
-                <div className="bg-white border-6 border-black p-8 rounded-2xl shadow-comic-lg transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
-                  <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform">{event.icon}</div>
-                  <h4 className="text-3xl font-bangers mb-4 text-black">{event.title}</h4>
-                  <p className="text-lg font-body text-gray-700">{event.desc}</p>
-                </div>
-                {/* Comic burst accent */}
-                <svg className="absolute -top-3 -right-3 w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity" viewBox="0 0 100 100">
-                  <path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="#dbc414" stroke="black" strokeWidth="2"/>
-                </svg>
+            <div className="group relative">
+              <div className="bg-white border-6 border-black p-8 rounded-2xl shadow-comic-lg transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🎤</div>
+                <h4 className="text-3xl font-bangers mb-4 text-black">Concert dessiné live</h4>
+                <p className="text-lg font-body text-gray-700">Un moment unique où la musique et le dessin se rencontrent sur scène pour émerveiller petits et grands.</p>
               </div>
-            ))}
+            </div>
+            <div className="group relative">
+              <div className="bg-white border-6 border-black p-8 rounded-2xl shadow-comic-lg transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🖊️</div>
+                <h4 className="text-3xl font-bangers mb-4 text-black">Dédicaces d&apos;auteurs</h4>
+                <p className="text-lg font-body text-gray-700">Venez rencontrer des auteurs exceptionnels venus de 5 pays, découvrir leurs univers et repartir avec un souvenir unique.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="bg-white border-6 border-black p-8 rounded-2xl shadow-comic-lg transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🎨</div>
+                <h4 className="text-3xl font-bangers mb-4 text-black">Ateliers & expos</h4>
+                <p className="text-lg font-body text-gray-700">Ateliers créatifs, expositions de planches originales, animations pour enfants, fanzones, auto-édités et plus encore !</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
