@@ -60,7 +60,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Optimized Comic Style */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center py-20 px-4 sm:px-6 bg-gradient-to-br from-[#dbc414] via-yellow-400 to-orange-400 border-b-8 border-black overflow-hidden text-center">
+      <section className="relative w-full bg-gradient-to-br from-[#dbc414] via-yellow-400 to-orange-400 text-black px-6 pt-8 pb-12 overflow-hidden border-b-4 border-black">
         <div className="absolute top-8 left-8 bg-black text-white font-bangers px-6 py-2 rounded-full border-4 border-white text-xl shadow-comic-xl z-20 animate-bounce-in">2e édition</div>
         <div className="max-w-4xl mx-auto z-10">
             <div className="relative flex justify-center items-center mb-6">
@@ -244,7 +244,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: "🚌", title: "Transport", desc: "Accès facile en transports en commun" },
-              { icon: "🚗", title: "Parking", desc: "Parking gratuit à proximité" },
+              { icon: "🚗", title: "Parking", desc: "Parking gratuit à proximité de l'évènement" },
               { icon: "🍽️", title: "Restauration", desc: "Food trucks et stands gourmands" },
               { icon: "🎟️", title: "Billetterie", desc: "Réservation en ligne ou sur place" }
             ].map((info, index) => (
