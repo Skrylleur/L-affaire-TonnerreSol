@@ -91,7 +91,10 @@ export default function Home() {
               17 ET 18 MAI 2025
             </div>
           </div>
-          <p className="text-xl sm:text-2xl md:text-3xl font-body font-bold text-black mb-8 animate-fade-in-up">On ne croyait déjà pas arriver à réaliser la première, et nous revoici pour une autre !</p>
+          <p className="mt-2 text-lg sm:text-xl md:text-2xl font-bold max-w-2xl text-black text-center mx-auto">
+            On ne croyait déjà pas arriver à réaliser la première,<br />
+            et nous revoici pour une autre !
+          </p>
         </div>
         {/* Chiffres clés */}
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-4xl mx-auto">
@@ -343,10 +346,15 @@ export default function Home() {
         <svg className="absolute top-4 right-10 w-12 h-12" viewBox="0 0 100 100">
           <path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="white" stroke="black" strokeWidth="3"/>
         </svg>
-        
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <p className="text-2xl font-bangers text-black mb-4">© 2025 L&apos;Affaire Tonnerresol</p>
           <p className="text-lg font-body text-black">Site réalisé par Antonin Gourinchas</p>
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <img src="/partenaire1.jpg" alt="Partenaire 1" className="h-12 w-auto object-contain" />
+            <img src="/partenaire2.png" alt="Partenaire 2" className="h-12 w-auto object-contain" />
+            <img src="/partenaire3.png" alt="Partenaire 3" className="h-12 w-auto object-contain" />
+            <img src="/partenaire4.png" alt="Partenaire 4" className="h-12 w-auto object-contain" />
+          </div>
         </div>
       </footer>
 
