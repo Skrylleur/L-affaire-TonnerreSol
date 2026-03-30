@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "#programmation", text: "Programme" },
+  { href: "/prix-curiosophie", text: "Prix CurioSophie" },
   { href: "#infos", text: "Infos pratiques" },
   { href: "#galerie", text: "Galerie" },
   { href: "#contact", text: "Contact" },

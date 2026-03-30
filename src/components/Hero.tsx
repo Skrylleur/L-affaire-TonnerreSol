@@ -1,9 +1,9 @@
 const stats = [
-  { number: "22", label: "auteurs", sub: "5 nationalités" },
-  { number: "7", label: "éditeurs", sub: "indépendants" },
+  { number: "20+", label: "auteurs", sub: "5 nationalités" },
+  { number: "9", label: "éditeurs", sub: "indépendants" },
   { number: "6", label: "conférences", sub: "" },
   { number: "3", label: "expositions", sub: "" },
-  { number: "1", label: "concert live", sub: "" },
+  { number: "1", label: "concert jazz", sub: "" },
   { number: "1", label: "prix littéraire", sub: "" },
 ];
 
@@ -21,9 +21,9 @@ export default function Hero() {
 
       {/* Main hero content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-14 md:py-20 text-center">
-        {/* "2e édition" badge */}
+        {/* "3e édition" badge */}
         <div className="inline-block animate-bounce-in bg-black text-festival font-bangers text-xl px-6 py-2 rounded-full border-2 border-black mb-8 shadow-comic">
-          ✦ 2e édition ✦
+          ✦ 3e édition ✦
         </div>
 
         {/* Main title */}
@@ -34,14 +34,13 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="font-body text-lg sm:text-xl text-black mb-8 max-w-xl mx-auto leading-relaxed opacity-90">
-          On ne croyait déjà pas arriver à réaliser la première,
-          et nous revoici pour une autre !
+          Toujours la banane, toujours debout — pour la troisième année consécutive !
         </p>
 
         {/* Date + location */}
         <div className="inline-flex flex-col sm:flex-row items-center gap-3 mb-8">
           <span className="bg-black text-festival font-bangers text-2xl sm:text-3xl px-8 py-3 rounded-xl border-4 border-black shadow-comic-lg">
-            17 &amp; 18 MAI 2025
+            16 &amp; 17 MAI 2026
           </span>
           <span className="bg-white text-black font-bangers text-xl px-6 py-3 rounded-xl border-4 border-black shadow-comic">
             📍 Tonnerre
@@ -61,9 +60,7 @@ export default function Hero() {
             <div
               key={i}
               className={`py-5 px-3 text-center ${
-                i < stats.length - 1
-                  ? "border-r-2 border-festival/40"
-                  : ""
+                i < stats.length - 1 ? "border-r-2 border-festival/40" : ""
               }`}
             >
               <div className="font-bangers text-festival text-4xl leading-none">
