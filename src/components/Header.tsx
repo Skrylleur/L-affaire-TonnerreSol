@@ -5,10 +5,13 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "#programmation", text: "Programme" },
+  { href: "#auteurs", text: "Auteurs" },
+  { href: "#concert", text: "Concert" },
+  { href: "#expositions", text: "Expos" },
   { href: "/prix-curiosophie", text: "Prix CurioSophie" },
   { href: "#infos", text: "Infos pratiques" },
-  { href: "#galerie", text: "Galerie" },
   { href: "#contact", text: "Contact" },
+  { href: "/editions-precedentes", text: "Éditions précédentes" },
 ];
 
 export default function Header() {
@@ -23,35 +26,40 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-festival border-b-4 border-black transition-shadow duration-300 ${
-        scrolled ? "shadow-comic-lg" : ""
+      className={`sticky top-0 z-50 bg-navy transition-shadow duration-300 ${
+        scrolled ? "shadow-card-lg" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
         {/* Logo + title */}
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-white border-4 border-black rounded-full overflow-hidden shadow-comic">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-white rounded-full overflow-hidden ring-2 ring-festival/60">
             <Image
               src="/Logo.jpg"
               alt="Logo L'Affaire Tonnerresol"
-              width={64}
-              height={64}
+              width={56}
+              height={56}
               className="w-full h-full object-cover"
               priority
             />
           </div>
-          <h1 className="font-bangers text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wide text-black leading-tight truncate">
-            L&apos;AFFAIRE TONNERRESOL
-          </h1>
+          <div className="min-w-0">
+            <p className="font-bangers text-festival text-xs tracking-widest uppercase leading-none mb-0.5 hidden sm:block">
+              Festival International de BD
+            </p>
+            <h1 className="font-bangers text-xl sm:text-2xl md:text-3xl tracking-wide text-festival leading-tight truncate">
+              L&apos;AFFAIRE TONNERRESOL
+            </h1>
+          </div>
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="px-4 py-2 bg-black text-festival font-bangers text-lg rounded-full border-2 border-black hover:bg-white hover:text-black transition-colors duration-200 shadow-comic whitespace-nowrap"
+              className="px-3 py-1.5 text-festival/80 font-body text-sm rounded-lg hover:bg-festival/10 hover:text-white transition-colors duration-150 whitespace-nowrap"
             >
               {link.text}
             </a>
@@ -60,19 +68,12 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex-shrink-0 bg-black text-white rounded-lg p-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-black"
+          className="lg:hidden flex-shrink-0 text-festival/80 hover:text-white p-2 rounded-lg hover:bg-festival/10 focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={menuOpen}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
             {menuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -84,12 +85,12 @@ export default function Header() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-black border-t-4 border-black px-4 py-4 flex flex-col gap-3">
+        <div className="lg:hidden bg-navy-dark border-t border-festival/15 px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block px-5 py-3 bg-festival text-black font-bangers text-xl rounded-xl border-2 border-festival text-center hover:bg-white transition-colors"
+              className="block px-4 py-2.5 text-festival/80 font-body text-base rounded-lg hover:bg-festival/10 hover:text-white transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.text}
