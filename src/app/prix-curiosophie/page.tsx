@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -9,7 +10,40 @@ export const metadata: Metadata = {
     "Le Prix CurioSophie récompense une bande dessinée audacieuse d'artistes émergents. 24 ouvrages en lice pour l'édition 2026.",
 };
 
-const NOMBRE_COUVERTURES = 24;
+const ouvrages = [
+  "Ariane rêve.jpg",
+  "BARAKA GRAFIKA.jpg",
+  "Des filles normales.jpg",
+  "Démontagner.jpg",
+  "Déraciné.jpg",
+  "Elsa & the Haters.jpg",
+  "Ici au quartier.jpg",
+  "La Maison des hystériques.jpg",
+  "La Timidité des arbres.jpg",
+  "La Trace.jpg",
+  "La dent de liguanodon.jpg",
+  "Le Procès des affamés.jpg",
+  "Les Apprenties.jpg",
+  "Lettres à Blue-Bird.jpg",
+  "Love Machine.jpg",
+  "Nous sommes la voix de celles qui nen ont plus.jpg",
+  "Retour à Carmélites.jpg",
+  "Rock'nroll Suicide.jpg",
+  "Rouge Signal.jpg",
+  "The Mops.jpg",
+  "Toc Toc.jpg",
+  "Tous Derriere et eux devant.jpg",
+  "Trop Tard.jpg",
+  "Week-end Texas Ranger .jpg",
+];
+
+function titre(filename: string) {
+  return filename.replace(/\.jpg$/i, "");
+}
+
+function srcPath(filename: string) {
+  return `/curiosophie/${encodeURIComponent(filename).replace(/'/g, "%27")}`;
+}
 
 function SectionBand({ children }: { children: React.ReactNode }) {
   return (
@@ -108,18 +142,24 @@ export default function PrixCurioSophie() {
 
           <div className="max-w-5xl mx-auto px-6 py-12">
             <p className="font-body text-gray-400 text-sm text-center mb-8">
-              Présentés par 12 éditeurs indépendants · Visuels à venir
+              Présentés par 12 éditeurs indépendants
             </p>
 
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
-              {Array.from({ length: NOMBRE_COUVERTURES }).map((_, i) => (
+              {ouvrages.map((file) => (
                 <div
-                  key={i}
-                  className="aspect-[2/3] bg-cream rounded-xl shadow-card border border-gray-100 flex items-center justify-center overflow-hidden"
+                  key={file}
+                  className="group relative aspect-[2/3] bg-cream rounded-xl overflow-hidden shadow-card hover:shadow-card-lg transition-shadow duration-200"
                 >
-                  <div className="text-center p-2">
-                    <span className="text-2xl opacity-20">📚</span>
-                    <p className="font-bangers text-xs text-gray-300 mt-1">#{i + 1}</p>
+                  <Image
+                    src={srcPath(file)}
+                    alt={titre(file)}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 16vw"
+                  />
+                  <div className="absolute inset-0 bg-festival/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-end p-2">
+                    <p className="font-bangers text-navy text-xs leading-tight">{titre(file)}</p>
                   </div>
                 </div>
               ))}

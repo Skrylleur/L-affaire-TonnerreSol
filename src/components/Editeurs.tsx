@@ -41,7 +41,14 @@ export default function Editeurs() {
               </div>
               <p className="font-body text-festival/60 text-sm leading-relaxed mb-3">{ed.desc}</p>
               {ed.url && (
-                <p className="font-body text-festival/60 text-xs">🔗 {ed.url}</p>
+                <a
+                  href={`https://${ed.url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-body text-festival/60 text-xs hover:text-festival transition-colors duration-150"
+                >
+                  🔗 {ed.url}
+                </a>
               )}
             </div>
           ))}

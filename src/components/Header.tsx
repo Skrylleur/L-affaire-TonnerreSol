@@ -32,7 +32,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
         {/* Logo + title */}
-        <div className="flex items-center gap-3 min-w-0">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-white rounded-full overflow-hidden ring-2 ring-festival/60">
             <Image
               src="/Logo.jpg"
@@ -47,14 +47,14 @@ export default function Header() {
             <p className="font-bangers text-festival text-xs tracking-widest uppercase leading-none mb-0.5 hidden sm:block">
               Festival International de BD
             </p>
-            <h1 className="font-bangers text-xl sm:text-2xl md:text-3xl tracking-wide text-festival leading-tight truncate">
+            <h1 className="font-bangers text-xl sm:text-2xl md:text-3xl tracking-wide text-festival leading-tight">
               L&apos;AFFAIRE TONNERRESOL
             </h1>
           </div>
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -68,7 +68,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden flex-shrink-0 text-festival/80 hover:text-white p-2 rounded-lg hover:bg-festival/10 focus:outline-none"
+          className="xl:hidden flex-shrink-0 text-festival/80 hover:text-white p-2 rounded-lg hover:bg-festival/10 focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={menuOpen}
@@ -85,7 +85,7 @@ export default function Header() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="lg:hidden bg-navy-dark border-t border-festival/15 px-4 py-3 flex flex-col gap-1">
+        <div className="xl:hidden bg-navy-dark border-t border-festival/15 px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
