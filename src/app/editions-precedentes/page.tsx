@@ -13,7 +13,7 @@ const editions = [
   {
     numero: "2e édition",
     annee: "2025",
-    href: "https://laffairetonnerresol.fr",
+    href: "https://laffairetonnerresol.fr/accueil-2025/",
     description:
       "La deuxième édition du festival, avec une programmation élargie, de nouveaux auteurs internationaux et le lancement du Prix CurioSophie.",
   },
